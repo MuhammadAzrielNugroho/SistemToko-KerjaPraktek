@@ -1,8 +1,10 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion position-fixed" id="accordionSidebar" style="height:100vh;">
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion position-fixed"
+    id="accordionSidebar"
+    style="width:225px; height:100vh; top:0; left:0; z-index:1030;">
 
     <!-- Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
-        <div class="sidebar-brand-text mx-3">SISTEM TOKO</div>
+        <div class="sidebar-brand-text mx-3">SISTEM PENDATAAN TOKO</div>
     </a>
 
     <hr class="sidebar-divider my-0">
@@ -20,8 +22,7 @@
     <div class="sidebar-heading">
         Master Data
     </div>
-
-    <!-- DATA TOKO -->
+    
     <li class="nav-item {{ request()->is('stores*') ? 'active' : '' }}">
         <a class="nav-link" href="/stores">
             <i class="fas fa-store"></i>
@@ -29,7 +30,6 @@
         </a>
     </li>
 
-    <!-- DATA KATEGORI -->
     <li class="nav-item {{ request()->is('categories*') ? 'active' : '' }}">
         <a class="nav-link" href="/categories">
             <i class="fas fa-tags"></i>
@@ -37,12 +37,13 @@
         </a>
     </li>
 
-    <!-- DATA KOTA -->
-<li class="nav-item {{ request()->is('cities*') ? 'active' : '' }}">
-    <a class="nav-link" href="/cities">
-        <i class="fas fa-city"></i>
-        <span>Data Kota</span>
-    </a>
-</li>
+    <li class="nav-item {{ request()->is('cities*') ? 'active' : '' }}">
+        <a class="nav-link" href="/cities">
+            <i class="fas fa-city"></i>
+            <span>Data Kota</span>
+        </a>
+    </li>
+
+    <hr class="sidebar-divider">
 
 </ul>

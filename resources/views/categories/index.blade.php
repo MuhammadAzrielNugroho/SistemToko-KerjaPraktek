@@ -19,7 +19,7 @@
     <thead>
         <tr>
             <th>Nama Kategori</th>
-            <th>Aksi</th>
+            <th width="150">Aksi</th>
         </tr>
     </thead>
     <tbody>

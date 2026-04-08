@@ -2,49 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta charset="UTF-8">
     <title>Sistem Toko</title>
 
-    <!-- SB Admin CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href="{{ asset('sbadmin2/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <link href="{{ asset('sbadmin2/css/sb-admin-2.min.css') }}" rel="stylesheet">
+
+    <style>
+        /* 🔥 FIX CONTENT KE KANAN */
+        #content-wrapper {
+            margin-left: 225px;
+        }
+    </style>
 </head>
 
 <body id="page-top">
 
 <div id="wrapper">
 
-    <!-- Sidebar -->
+    <!-- SIDEBAR -->
     @include('layouts.sidebar')
 
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column" style="margin-left: 225px;">
+    <!-- CONTENT -->
+    <div id="content-wrapper" class="d-flex flex-column">
 
         <div id="content">
 
-            <!-- Topbar -->
+            <!-- TOPBAR -->
             @include('layouts.topbar')
 
-            <!-- Content -->
-            <div class="container-fluid">
+            <!-- MAIN -->
+            <div class="container-fluid mt-4">
                 @yield('content')
             </div>
 
         </div>
 
-        <!-- Footer -->
-        @include('layouts.footer')
-
     </div>
 
 </div>
 
-<!-- JS -->
 <script src="{{ asset('sbadmin2/vendor/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('sbadmin2/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('sbadmin2/js/sb-admin-2.min.js') }}"></script>
+
 @yield('scripts')
+
 </body>
 </html>

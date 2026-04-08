@@ -7,6 +7,9 @@ use App\Models\Category;
 use App\Models\City;
 use Illuminate\Http\Request;
 
+use App\Imports\StoreImport;
+use Maatwebsite\Excel\Facades\Excel;
+
 class StoreController extends Controller
 {
     public function index()
@@ -87,4 +90,16 @@ class StoreController extends Controller
 
         return redirect()->route('stores.index')->with('success', 'Data toko berhasil dihapus');
     }
+
+    public function import(Request $request)
+{
+    $request->validate([
+        'file' => 'required|mimes:xlsx,xls,csv'
+    ]);
+
+    Excel::import(new StoreImport, $request->file('file'));
+
+    return redirect()->route('stores.index')->with('success', 'Import berhasil!');
+}
+
 }
